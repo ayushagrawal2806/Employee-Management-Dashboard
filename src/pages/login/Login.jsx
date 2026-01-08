@@ -1,18 +1,20 @@
 import "./Login.css";
 import { useContext, useState } from "react";
-import employeeContext from "./../../context/context";
+import employeeContext from "../../context/context";
 import { LogIn, ShieldCheck, Mail, Lock } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
-  const [email, setEmail] = useState("admin@promanage.com");
+  const [email, setEmail] = useState("admin@assignment.com");
   const [password, setPassword] = useState("password");
   const [error, setError] = useState("");
   const { setIsLoggedIn } = useContext(employeeContext);
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email === "admin@promanage.com" && password === "password") {
+    if (email === "admin@assignment.com" && password === "password") {
       setIsLoggedIn(true);
       localStorage.setItem("isAuthenticated", true);
+      navigate("/dashboard");
     } else {
       setError("Invalid email or password");
     }
@@ -24,7 +26,7 @@ const Login = () => {
           <div className="login-icon">
             <ShieldCheck />
           </div>
-          <h1>ProManage</h1>
+          <h1>ProAssignment</h1>
           <p>Welcome back! Please login to your account.</p>
         </div>
 
@@ -67,7 +69,7 @@ const Login = () => {
 
         <div className="demo-credentials">
           <p className="demo-title">Demo Credentials</p>
-          <p>admin@promanage.com / password</p>
+          <p>admin@assignment.com / password</p>
         </div>
       </div>
     </div>
