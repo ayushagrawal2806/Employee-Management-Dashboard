@@ -4,8 +4,8 @@ import employeeContext from "../../context/context";
 import { LogIn, ShieldCheck, Mail, Lock } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 const Login = () => {
-  const [email, setEmail] = useState("admin@assignment.com");
-  const [password, setPassword] = useState("password");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const { setIsLoggedIn } = useContext(employeeContext);
   const navigate = useNavigate();
