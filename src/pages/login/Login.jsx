@@ -11,7 +11,7 @@ const Login = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email === "admin@assignment.com" && password === "password") {
+    if (email === "admin@assignment.com" && password === "assignment@123") {
       setIsLoggedIn(true);
       localStorage.setItem("isAuthenticated", true);
       navigate("/dashboard");
@@ -69,7 +69,7 @@ const Login = () => {
 
         <div className="demo-credentials">
           <p className="demo-title">Demo Credentials</p>
-          <p>admin@assignment.com / password</p>
+          <p>admin@assignment.com / assignment@123</p>
         </div>
       </div>
     </div>

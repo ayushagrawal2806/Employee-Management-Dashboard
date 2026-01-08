@@ -69,7 +69,7 @@ A mock backend is used to simulate real API behavior, so no real server is requi
 
 7. Login using mock credentials
    Email: admin@assignment.com
-   Password: password
+   Password: assignment@123
 
 8. Use dashboard to:
    - Add employee
